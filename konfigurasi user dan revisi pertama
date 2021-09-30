@@ -1,0 +1,60 @@
+//Pertama setelah selesai menginstall git, kita perlu konfigurasi user / name pada saat pertama kali yaitu dengan cara ://
+$ git config --global user.name "Ramadani"
+$ git config --global user.email ramzdanigan@gmail.com
+$ git config --list
+
+//tampilan jika konfigurasi berhasil :
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+core.editor="C:\\Program Files\\Sublime Text 3\\subl.exe" -w
+pull.rebase=false
+credential.helper=manager
+user.name=ramadani
+user.email=ramzdanigan@gmail.com
+
+//setelah itu kita akan membuat repository baru dengan perintah :
+$git init
+Initialized empty Git repository in D:/kuliah/LatihGIT/.git/
+//perintah git tersebut bertujuan untuk membuat folder file yang bernama.git di proyek kita//
+
+//setelah memmbuat folder file bernama .git kita membuat 3 file kosong yaitu about contact dan index//
+$ git status
+//bertujuan untuk melihat status folder yang ada di proyek kita
+
+//membuat revisi pertama , ada 4 cara untuk membuat file html , diantara lain ://
+##cara pertama##
+$ git add index.html
+$ git add about.html
+$ git add contact.html
+
+##cara kedua##
+$ git add index.html about.html contact.html
+$ git add *.html
+$ git add .
+
+//untuk mengecek apakah sudah berhasil yaitu//
+$ git status
+
+//rubah kondisi file kita ke commit yaitu dengan cara://
+$ git commit -m "menambahkan index.html,about.html,contact.html" lalu enter
+//jika berhasil akan tampil seperti ini//
+[master (root-commit) 56551a8] menambahkan index.html,about.html,contact.html
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 about.html
+ create mode 100644 contact.html
+ create mode 100644 index.html
+
+//gunakan perintah git status lagi untuk mengetahui kondisi file gitnya//
+$ git status
+//jika sudah akan tampil seperti ini ://
+On branch master
+nothing to commit, working tree clean
